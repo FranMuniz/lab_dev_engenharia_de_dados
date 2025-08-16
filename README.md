@@ -1,6 +1,6 @@
-## 🧑‍💻 Data Engineering Lab
+## Laboratório de Desenvolvimento - Engenharia de Dados
 
-💡 Um laboratório completo para estudos em **Engenharia de Dados**, rodando via **Docker**.  
+Um laboratório completo para estudos em **Engenharia de Dados**, rodando via **Docker**.  
 Aqui você encontra um ambiente integrado com **Spark, PySpark, Jupyter, PostgreSQL e Airflow**, pronto para treinar desde consultas SQL até orquestração de pipelines de dados.
 
 ---
