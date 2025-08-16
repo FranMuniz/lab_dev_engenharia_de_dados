@@ -119,7 +119,7 @@ Responsável por lidar com sensores e disparos assíncronos.
 ### Bônus: Roadmap de Estudos
 
 #### Fundamentos de Python
-- [ ] Sintaxe básica, variáveis, tipos de dados  
+- [] Sintaxe básica, variáveis, tipos de dados  
 - [ ] Estruturas de controle (`if`, `for`, `while`)  
 - [ ] Funções, módulos e pacotes  
 - [ ] Listas, dicionários, tuplas e sets  
