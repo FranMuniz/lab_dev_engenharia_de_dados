@@ -125,24 +125,3 @@ Responsável por agendar e executar as DAGs.
 **Airflow Triggerer**  
 Responsável por lidar com sensores e disparos assíncronos.  
 
----
-
-flowchart TD
-    A[📌 Fundamentos de Python] --> B[📌 Banco de Dados e SQL]
-    B --> C[📌 Git & GitHub]
-    C --> D[📌 Manipulação de Dados com Python]
-    D --> E[📌 Apache Spark & PySpark]
-    E --> F[📌 Orquestração com Airflow]
-    F --> G[📌 Engenharia de Dados na Prática]
-    G --> H[📌 Boas Práticas & Soft Skills]
-    H --> I[📌 Extras para Diferencial]
-
-    style A fill:#f9c74f,stroke:#000,stroke-width:1px
-    style B fill:#90be6d,stroke:#000,stroke-width:1px
-    style C fill:#f94144,stroke:#000,stroke-width:1px
-    style D fill:#577590,stroke:#000,stroke-width:1px
-    style E fill:#43aa8b,stroke:#000,stroke-width:1px
-    style F fill:#f3722c,stroke:#000,stroke-width:1px
-    style G fill:#577590,stroke:#000,stroke-width:1px
-    style H fill:#f8961e,stroke:#000,stroke-width:1px
-    style I fill:#90be6d,stroke:#000,stroke-width:1px
