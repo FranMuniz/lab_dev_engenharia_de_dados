@@ -5,7 +5,7 @@ Aqui você encontra um ambiente integrado com **Spark, PySpark, Jupyter, Postgre
 
 ---
 
-### 🚀 Tecnologias
+### Tecnologias
 
 - **Apache Spark** → processamento distribuído de dados.
 - **PySpark** → API Python para manipulação de dados no Spark.
@@ -99,35 +99,35 @@ docker-compose up -d
 
 ### 4️⃣ Acesse os serviços
 
-**🔥 Spark Master**  
+**Spark Master**  
 [http://localhost:8080](http://localhost:8080)  
 Interface web do Spark para acompanhar workers e jobs.
 
-**⚡ Spark Worker**  
+**Spark Worker**  
 [http://localhost:8081](http://localhost:8081)  
 Interface web do worker conectado ao cluster Spark.
 
-**📒 Jupyter Notebook**  
+**Jupyter Notebook**  
 [http://localhost:8888](http://localhost:8888)  
 Ambiente interativo com PySpark já configurado.  
 Não é necessário informar token ou senha para acessar.
 
-**🐘 PostgreSQL**  
+**PostgreSQL**  
 Host: `localhost:5432`  
 Banco de dados relacional para integração com Spark e Airflow.  
 - **Usuário:** `${POSTGRES_USER}`  
 - **Senha:** `${POSTGRES_PASSWORD}`  
 - **Banco:** `${POSTGRES_DB}`  
 
-**🌬️ Airflow Webserver**  
+**Airflow Webserver**  
 [http://localhost:8082](http://localhost:8082)  
 Interface web do Airflow para monitorar DAGs.  
 - Usuário padrão: `admin`  
 - Senha padrão: `admin`  
 
-**📅 Airflow Scheduler**  
+**Airflow Scheduler**  
 Responsável por agendar e executar as DAGs.  
 
-**🎯 Airflow Triggerer**  
+**Airflow Triggerer**  
 Responsável por lidar com sensores e disparos assíncronos.  
 
