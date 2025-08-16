@@ -24,12 +24,27 @@ Aqui você encontra um ambiente integrado com **Spark, PySpark, Jupyter, Postgre
 
 ### 📌 Roadmap de Estudos
 
-- [ ] Fundamentos de Spark (RDD, DataFrames, Lazy Evaluation)  
-- [ ] Operações básicas (`select`, `filter`, `groupBy`, `join`)  
-- [ ] Leitura e escrita de dados (CSV, Parquet, PostgreSQL)  
-- [ ] Spark SQL  
-- [ ] Integração Spark + Airflow  
-- [ ] Pipelines completos de Engenharia de Dados  
+flowchart LR
+    A[📌 Python] --> B[📌 SQL]
+    B --> C[📌 Git & GitHub]
+    C --> D[📌 Manipulação de Dados]
+    D --> E[📌 Spark & PySpark]
+    E --> F[📌 Airflow]
+    F --> G[📌 PostgreSQL & Data Warehouses]
+    G --> H[📌 Engenharia de Dados prática]
+    H --> I[📌 Boas práticas & Soft Skills]
+    I --> J[📌 Extras: Docker, CI/CD, Big Data]
+
+    style A fill:#f9c74f,stroke:#000,stroke-width:1px
+    style B fill:#90be6d,stroke:#000,stroke-width:1px
+    style C fill:#f94144,stroke:#000,stroke-width:1px
+    style D fill:#577590,stroke:#000,stroke-width:1px
+    style E fill:#43aa8b,stroke:#000,stroke-width:1px
+    style F fill:#f3722c,stroke:#000,stroke-width:1px
+    style G fill:#90be6d,stroke:#000,stroke-width:1px
+    style H fill:#577590,stroke:#000,stroke-width:1px
+    style I fill:#f8961e,stroke:#000,stroke-width:1px
+    style J fill:#f9844a,stroke:#000,stroke-width:1px
 
 ---
 
