@@ -1,0 +1,57 @@
+# =========================
+# Python / Jupyter
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# =========================
+# Jupyter Notebook
+# =========================
+
+
+# =========================
+# Docker
+# =========================
+*.env
+docker-compose.override.yml
+**/Dockerfile.*
+**/docker-compose.override.yml
+
+# =========================
+# Airflow
+# =========================
+/logs/
+/plugins/__pycache__/
+/dags/__pycache__/
+
+# =========================
+# Spark / PySpark
+# =========================
+*.log
+*.out
+*.tmp
+spark-warehouse/
+
+# =========================
+# PostgreSQL
+# =========================
+pgdata/
+*.sql
+*.dump
+
+# =========================
+# VSCode / IDEs
+# =========================
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# =========================
+# Mac / Windows
+# =========================
+.DS_Store
+Thumbs.db
