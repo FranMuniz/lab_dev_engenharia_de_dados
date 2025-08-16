@@ -44,7 +44,7 @@ lab_dev_engenharia_de_dados/
 │── dags/                # DAGs do Airflow
 │── logs/                # logs do Airflow
 │── plugins/             # plugins do Airflow
-
+```
 ---
 
 ## ⚙️ Como rodar o ambiente
@@ -52,15 +52,18 @@ lab_dev_engenharia_de_dados/
 ### 1️⃣ Clone este repositório
 Clone o repositório e entre na pasta do projeto:  
 **Comandos:**  
+```bash
 git clone https://github.com/seu-usuario/meu-lab-dados.git  
 cd lab_dev_engenharia_de_dados/
+```
 
 ---
 
 ### 2️⃣ Suba os serviços com Docker Compose
 **Comando:**  
+```bash
 docker-compose up -d
-
+```
 ---
 
 ### 3️⃣ Acesse os serviços
