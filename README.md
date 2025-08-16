@@ -1,4 +1,4 @@
-## Laboratório de Desenvolvimento - Engenharia de Dados
+## 💻 Laboratório de Desenvolvimento - Engenharia de Dados
 
 Um laboratório completo para estudos em **Engenharia de Dados**, rodando via **Docker**.  
 Aqui você encontra um ambiente integrado com **Spark, PySpark, Jupyter, PostgreSQL e Airflow**, pronto para treinar desde consultas SQL até orquestração de pipelines de dados.
@@ -22,7 +22,7 @@ Aqui você encontra um ambiente integrado com **Spark, PySpark, Jupyter, Postgre
 
 ---
 
-## 📂 Estrutura de Pastas
+### 📂 Estrutura de Pastas
 
 ```bash
 lab_dev_engenharia_de_dados/
@@ -119,7 +119,7 @@ Responsável por lidar com sensores e disparos assíncronos.
 ### Bônus: Roadmap de Estudos
 
 #### Fundamentos de Python
-- [] Sintaxe básica, variáveis, tipos de dados  
+- [ ] Sintaxe básica, variáveis, tipos de dados  
 - [ ] Estruturas de controle (`if`, `for`, `while`)  
 - [ ] Funções, módulos e pacotes  
 - [ ] Listas, dicionários, tuplas e sets  
