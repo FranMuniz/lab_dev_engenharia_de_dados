@@ -52,7 +52,7 @@ cd lab_dev_engenharia_de_dados/
 ```
 POSTGRES_USER=admin
 POSTGRES_PASSWORD=admin
-POSTGRES_DB=mydb
+POSTGRES_DB=lab_dev
 ```
 
 ### Jupyter (opcional, já está sem token)
@@ -64,7 +64,7 @@ JUPYTER_PASSWORD_HASH=CHAVE_HASH_AQUI
 ```
 AIRFLOW_DB_USER=admin
 AIRFLOW_DB_PASSWORD=admin
-AIRFLOW_DB_NAME=airflow
+AIRFLOW_DB_NAME=lab_dev
 AIRFLOW_FERNET_KEY=CHAVE_FERNET_AQUI
 ```
 Gere a chave Fernet com:
