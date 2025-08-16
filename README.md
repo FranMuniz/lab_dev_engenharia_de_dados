@@ -22,32 +22,6 @@ Aqui você encontra um ambiente integrado com **Spark, PySpark, Jupyter, Postgre
 
 ---
 
-### 📌 Roadmap de Estudos
-
-flowchart LR
-    A[📌 Python] --> B[📌 SQL]
-    B --> C[📌 Git & GitHub]
-    C --> D[📌 Manipulação de Dados]
-    D --> E[📌 Spark & PySpark]
-    E --> F[📌 Airflow]
-    F --> G[📌 PostgreSQL & Data Warehouses]
-    G --> H[📌 Engenharia de Dados prática]
-    H --> I[📌 Boas práticas & Soft Skills]
-    I --> J[📌 Extras: Docker, CI/CD, Big Data]
-
-    style A fill:#f9c74f,stroke:#000,stroke-width:1px
-    style B fill:#90be6d,stroke:#000,stroke-width:1px
-    style C fill:#f94144,stroke:#000,stroke-width:1px
-    style D fill:#577590,stroke:#000,stroke-width:1px
-    style E fill:#43aa8b,stroke:#000,stroke-width:1px
-    style F fill:#f3722c,stroke:#000,stroke-width:1px
-    style G fill:#90be6d,stroke:#000,stroke-width:1px
-    style H fill:#577590,stroke:#000,stroke-width:1px
-    style I fill:#f8961e,stroke:#000,stroke-width:1px
-    style J fill:#f9844a,stroke:#000,stroke-width:1px
-
----
-
 ## 📂 Estrutura de Pastas
 
 ```bash
@@ -139,4 +113,78 @@ Responsável por agendar e executar as DAGs.
 
 **Airflow Triggerer**  
 Responsável por lidar com sensores e disparos assíncronos.  
+
+---
+
+### Bônus: Roadmap de Estudos
+
+#### Fundamentos de Python
+- [ ] Sintaxe básica, variáveis, tipos de dados  
+- [ ] Estruturas de controle (`if`, `for`, `while`)  
+- [ ] Funções, módulos e pacotes  
+- [ ] Listas, dicionários, tuplas e sets  
+- [ ] Manipulação de arquivos (CSV, JSON, TXT)  
+- [ ] Bibliotecas: `pandas`, `numpy`, `datetime`  
+
+#### Banco de Dados e SQL
+- [ ] Conceitos de banco de dados relacional vs não-relacional  
+- [ ] Criação de tabelas e inserção de dados  
+- [ ] Consultas básicas (`SELECT`, `WHERE`, `ORDER BY`, `GROUP BY`)  
+- [ ] Joins (`INNER`, `LEFT`, `RIGHT`, `FULL`)  
+- [ ] Funções agregadas e de janela (`SUM`, `COUNT`, `ROW_NUMBER`)  
+- [ ] Subqueries e CTEs (`WITH`)  
+- [ ] Indexes, constraints e normalização  
+- [ ] Prática em PostgreSQL  
+
+#### Git & GitHub
+- [ ] Git: clone, add, commit, push, pull  
+- [ ] Branches e merges  
+- [ ] Pull Requests e code review  
+- [ ] GitHub: repositórios, issues, GitHub Actions (CI/CD básico)  
+
+#### Manipulação de Dados com Python
+- [ ] Leitura/escrita de dados: CSV, Excel, Parquet  
+- [ ] Limpeza de dados: `fillna`, `dropna`, duplicados  
+- [ ] Transformações: `apply`, `map`, `merge`, `concat`  
+- [ ] Agregações e pivot tables  
+- [ ] Validação e qualidade de dados  
+
+#### Apache Spark & PySpark
+- [ ] Fundamentos de Spark (RDD, DataFrames, Lazy Evaluation)  
+- [ ] Operações básicas (`select`, `filter`, `groupBy`, `join`)  
+- [ ] Leitura e escrita de dados (CSV, Parquet, PostgreSQL, S3)  
+- [ ] Transformações avançadas (`window functions`, `pivot`, `explode`)  
+- [ ] Spark SQL  
+- [ ] Otimização: caching, partitioning, broadcast join  
+- [ ] PySpark UDFs e UDAFs  
+
+#### Orquestração de Pipelines (Airflow)
+- [ ] DAGs e scheduling  
+- [ ] Operadores: PythonOperator, BashOperator, PostgresOperator  
+- [ ] Variáveis, XCom e templates Jinja  
+- [ ] SubDAGs e modularização  
+- [ ] Monitoramento de pipelines e alertas  
+- [ ] Integração Airflow + Spark + Banco de Dados  
+
+#### Engenharia de Dados na Prática
+- [ ] Pipelines de ingestão e transformação  
+- [ ] Integração com APIs e sistemas externos  
+- [ ] Processamento batch vs streaming  
+- [ ] Armazenamento: bancos de dados, data lakes, warehouses  
+- [ ] Logging, rastreabilidade e testes de dados  
+
+#### Boas Práticas & Soft Skills
+- [ ] Estrutura de pastas e organização de código  
+- [ ] Variáveis de ambiente (`.env`)  
+- [ ] Controle de dependências (`requirements.txt`, `pipenv`, `poetry`)  
+- [ ] Documentação clara e README amigável  
+- [ ] Comunicação com time e stakeholders  
+
+#### Extras e Diferenciais
+- [ ] Docker para ambientes isolados  
+- [ ] CI/CD aplicado a pipelines de dados  
+- [ ] Visualização de dados: Matplotlib, Seaborn, Plotly  
+- [ ] Conceitos de Big Data: Kafka, Hive, Hudi, Delta Lake  
+- [ ] Aprendizado contínuo: cursos, documentação e projetos práticos  
+
 
