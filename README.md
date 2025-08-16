@@ -116,33 +116,31 @@ Responsável por lidar com sensores e disparos assíncronos.
 ### Bônus: Roadmap de Estudos
 
 #### Fundamentos de Python
-- [ ] Sintaxe básica, variáveis, tipos de dados  
-- [ ] Estruturas de controle (`if`, `for`, `while`)  
-- [ ] Funções, módulos e pacotes  
-- [ ] Listas, dicionários, tuplas e sets  
-- [ ] Manipulação de arquivos (CSV, JSON, TXT)  
-- [ ] Bibliotecas: `pandas`, `numpy`, `datetime`  
+- [x] Sintaxe básica, variáveis, tipos de dados  
+- [x] Estruturas de controle (`if`, `for`, `while`)  
+- [x] Funções, módulos e pacotes  
+- [x] Listas, dicionários, tuplas e sets  
+- [x] Manipulação de arquivos (CSV, JSON, TXT)  
+- [x] Bibliotecas: `pandas`, `numpy`, `datetime`  
 
 #### Banco de Dados e SQL
-- [ ] Conceitos de banco de dados relacional vs não-relacional  
-- [ ] Criação de tabelas e inserção de dados  
-- [ ] Consultas básicas (`SELECT`, `WHERE`, `ORDER BY`, `GROUP BY`)  
-- [ ] Joins (`INNER`, `LEFT`, `RIGHT`, `FULL`)  
-- [ ] Funções agregadas e de janela (`SUM`, `COUNT`, `ROW_NUMBER`)  
-- [ ] Subqueries e CTEs (`WITH`)  
-- [ ] Indexes, constraints e normalização  
-- [ ] Prática em PostgreSQL  
+- [x] Conceitos de banco de dados relacional vs não-relacional  
+- [x] Criação de tabelas e inserção de dados  
+- [x] Consultas básicas (`SELECT`, `WHERE`, `ORDER BY`, `GROUP BY`)  
+- [x] Joins (`INNER`, `LEFT`, `RIGHT`, `FULL`)  
+- [x] Funções agregadas e de janela (`SUM`, `COUNT`, `ROW_NUMBER`)  
+- [x] Subqueries e CTEs (`WITH`)  
+- [x] Prática em PostgreSQL  
 
 #### Git & GitHub
-- [ ] Git: clone, add, commit, push, pull  
-- [ ] Branches e merges  
-- [ ] Pull Requests e code review  
-- [ ] GitHub: repositórios, issues, GitHub Actions (CI/CD básico)  
+- [x] Git: clone, add, commit, push, pull  
+- [x] Branches e merges  
+- [x] Pull Requests e code review  
 
 #### Manipulação de Dados com Python
 - [ ] Leitura/escrita de dados: CSV, Excel, Parquet  
-- [ ] Limpeza de dados: `fillna`, `dropna`, duplicados  
-- [ ] Transformações: `apply`, `map`, `merge`, `concat`  
+- [ ] Limpeza de dados
+- [ ] Transformações 
 - [ ] Agregações e pivot tables  
 - [ ] Validação e qualidade de dados  
 
@@ -171,16 +169,14 @@ Responsável por lidar com sensores e disparos assíncronos.
 - [ ] Logging, rastreabilidade e testes de dados  
 
 #### Boas Práticas & Soft Skills
-- [ ] Estrutura de pastas e organização de código  
-- [ ] Variáveis de ambiente (`.env`)  
+- [x] Estrutura de pastas e organização de código  
+- [x] Variáveis de ambiente (`.env`)  
 - [ ] Controle de dependências (`requirements.txt`, `pipenv`, `poetry`)  
-- [ ] Documentação clara e README amigável  
-- [ ] Comunicação com time e stakeholders  
+- [x] Documentação clara e README amigável  
 
 #### Extras e Diferenciais
-- [ ] Docker para ambientes isolados  
+- [x] Docker para ambientes isolados  
 - [ ] CI/CD aplicado a pipelines de dados  
-- [ ] Visualização de dados: Matplotlib, Seaborn, Plotly  
 - [ ] Conceitos de Big Data: Kafka, Hive, Hudi, Delta Lake  
 - [ ] Aprendizado contínuo: cursos, documentação e projetos práticos  
 
