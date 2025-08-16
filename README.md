@@ -15,11 +15,11 @@ Aqui você encontra um ambiente integrado com **Spark, PySpark, Jupyter, Postgre
 
 <p align="center">
   <img src="https://img.shields.io/badge/Spark-FF6F00?style=for-the-badge&logo=apachespark&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PySpark-EE4C2C?style=for-the-badge&logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/Spark_SQL-FF6F00?style=for-the-badge&logo=apachespark&logoColor=white"/>
   <img src="https://img.shields.io/badge/Postgres-316192?style=for-the-badge&logo=postgresql&logoColor=white"/>
   <img src="https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white"/>
   <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
-  <img src="https://img.shields.io/badge/PySpark-EE4C2C?style=for-the-badge&logo=python&logoColor=white"/>
 </p>
 
 ---
@@ -39,8 +39,12 @@ Aqui você encontra um ambiente integrado com **Spark, PySpark, Jupyter, Postgre
 
 ```bash
 lab_dev_engenharia_de_dados/
+│── .env                 # variáveis de ambiente
+│── .gitignore           # arquivos/diretórios ignorados pelo Git
 │── docker-compose.yml   # definição dos serviços
-│── notebooks/           # Jupyter Notebooks com seus estudos em PySpark
+│── Dockerfile           # imagem customizada para o container
+│── README.md            # documentação do projeto
+│── notebooks/           # Jupyter Notebooks
 │── dags/                # DAGs do Airflow
 │── logs/                # logs do Airflow
 │── plugins/             # plugins do Airflow
@@ -60,24 +64,30 @@ cd lab_dev_engenharia_de_dados/
 ---
 
 ### 2️⃣ Configure o arquivo .env
-# PostgreSQL
+### PostgreSQL
+```
 POSTGRES_USER=admin
 POSTGRES_PASSWORD=admin
 POSTGRES_DB=mydb
+```
 
-# Jupyter (opcional, já está sem token)
-JUPYTER_PASSWORD_HASH=
+### Jupyter (opcional, já está sem token)
+```
+JUPYTER_PASSWORD_HASH=CHAVE_HASH_AQUI
+```
 
-# Airflow
+### Airflow
+```
 AIRFLOW_DB_USER=admin
 AIRFLOW_DB_PASSWORD=admin
 AIRFLOW_DB_NAME=airflow
 AIRFLOW_FERNET_KEY=CHAVE_FERNET_AQUI
-
-🔑 Gere a chave Fernet com:
+```
+Gere a chave Fernet com:
 ```bash
 python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
 ```
+
 ---
 
 ### 3️⃣ Suba os serviços com Docker Compose
