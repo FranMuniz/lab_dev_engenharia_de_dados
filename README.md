@@ -3,8 +3,6 @@
 Um laboratório completo para estudos em **Engenharia de Dados**, rodando via **Docker**.  
 Aqui você encontra um ambiente integrado com **Spark, PySpark, Jupyter, PostgreSQL e Airflow**, pronto para treinar desde consultas SQL até orquestração de pipelines de dados.
 
----
-
 ### Tecnologias
 
 - **Apache Spark** → processamento distribuído de dados.
@@ -51,13 +49,13 @@ lab_dev_engenharia_de_dados/
 ```
 ---
 
-## ⚙️ Como rodar o ambiente
+## Como rodar o ambiente
 
 ### 1️⃣ Clone este repositório
 Clone o repositório e entre na pasta do projeto:  
 **Comandos:**  
 ```bash
-git clone https://github.com/seu-usuario/meu-lab-dados.git  
+git clone git@github.com:FranMuniz/lab_dev_engenharia_de_dados.git 
 cd lab_dev_engenharia_de_dados/
 ```
 
@@ -95,6 +93,7 @@ python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().d
 ```bash
 docker-compose up -d
 ```
+
 ---
 
 ### 4️⃣ Acesse os serviços
@@ -115,15 +114,10 @@ Não é necessário informar token ou senha para acessar.
 **PostgreSQL**  
 Host: `localhost:5432`  
 Banco de dados relacional para integração com Spark e Airflow.  
-- **Usuário:** `${POSTGRES_USER}`  
-- **Senha:** `${POSTGRES_PASSWORD}`  
-- **Banco:** `${POSTGRES_DB}`  
 
 **Airflow Webserver**  
 [http://localhost:8082](http://localhost:8082)  
 Interface web do Airflow para monitorar DAGs.  
-- Usuário padrão: `admin`  
-- Senha padrão: `admin`  
 
 **Airflow Scheduler**  
 Responsável por agendar e executar as DAGs.  
@@ -131,3 +125,24 @@ Responsável por agendar e executar as DAGs.
 **Airflow Triggerer**  
 Responsável por lidar com sensores e disparos assíncronos.  
 
+---
+
+flowchart TD
+    A[📌 Fundamentos de Python] --> B[📌 Banco de Dados e SQL]
+    B --> C[📌 Git & GitHub]
+    C --> D[📌 Manipulação de Dados com Python]
+    D --> E[📌 Apache Spark & PySpark]
+    E --> F[📌 Orquestração com Airflow]
+    F --> G[📌 Engenharia de Dados na Prática]
+    G --> H[📌 Boas Práticas & Soft Skills]
+    H --> I[📌 Extras para Diferencial]
+
+    style A fill:#f9c74f,stroke:#000,stroke-width:1px
+    style B fill:#90be6d,stroke:#000,stroke-width:1px
+    style C fill:#f94144,stroke:#000,stroke-width:1px
+    style D fill:#577590,stroke:#000,stroke-width:1px
+    style E fill:#43aa8b,stroke:#000,stroke-width:1px
+    style F fill:#f3722c,stroke:#000,stroke-width:1px
+    style G fill:#577590,stroke:#000,stroke-width:1px
+    style H fill:#f8961e,stroke:#000,stroke-width:1px
+    style I fill:#90be6d,stroke:#000,stroke-width:1px
