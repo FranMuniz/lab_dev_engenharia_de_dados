@@ -59,28 +59,65 @@ cd lab_dev_engenharia_de_dados/
 
 ---
 
-### 2️⃣ Suba os serviços com Docker Compose
+### 2️⃣ Configure o arquivo .env
+# PostgreSQL
+POSTGRES_USER=admin
+POSTGRES_PASSWORD=admin
+POSTGRES_DB=mydb
+
+# Jupyter (opcional, já está sem token)
+JUPYTER_PASSWORD_HASH=
+
+# Airflow
+AIRFLOW_DB_USER=admin
+AIRFLOW_DB_PASSWORD=admin
+AIRFLOW_DB_NAME=airflow
+AIRFLOW_FERNET_KEY=CHAVE_FERNET_AQUI
+
+🔑 Gere a chave Fernet com:
+```bash
+python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
+```
+---
+
+### 3️⃣ Suba os serviços com Docker Compose
 **Comando:**  
 ```bash
 docker-compose up -d
 ```
 ---
 
-### 3️⃣ Acesse os serviços
+### 4️⃣ Acesse os serviços
 
 **🔥 Spark Master**  
 [http://localhost:8080](http://localhost:8080)  
 Interface web do Spark para acompanhar workers e jobs.
 
+**⚡ Spark Worker**  
+[http://localhost:8081](http://localhost:8081)  
+Interface web do worker conectado ao cluster Spark.
+
 **📒 Jupyter Notebook**  
 [http://localhost:8888](http://localhost:8888)  
 Ambiente interativo com PySpark já configurado.  
-Para ver o token de acesso:  
-docker logs jupyter
+Não é necessário informar token ou senha para acessar.
 
 **🐘 PostgreSQL**  
 Host: `localhost:5432`  
 Banco de dados relacional para integração com Spark e Airflow.  
-- **Usuário:** admin  
-- **Senha:** admin  
-- **Banco:** mydb
+- **Usuário:** `${POSTGRES_USER}`  
+- **Senha:** `${POSTGRES_PASSWORD}`  
+- **Banco:** `${POSTGRES_DB}`  
+
+**🌬️ Airflow Webserver**  
+[http://localhost:8082](http://localhost:8082)  
+Interface web do Airflow para monitorar DAGs.  
+- Usuário padrão: `admin`  
+- Senha padrão: `admin`  
+
+**📅 Airflow Scheduler**  
+Responsável por agendar e executar as DAGs.  
+
+**🎯 Airflow Triggerer**  
+Responsável por lidar com sensores e disparos assíncronos.  
+
