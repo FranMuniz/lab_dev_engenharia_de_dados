@@ -70,6 +70,24 @@ services:
       - datalab
 
   # =========================
+  # MINIO (S3 LOCAL)
+  # =========================
+  minio:
+    image: minio/minio:latest
+    container_name: minio
+    ports:
+      - "9000:9000"  # API S3
+      - "9090:9090"  # Console Web
+    environment:
+      - MINIO_ROOT_USER=${MINIO_ROOT_USER}
+      - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}
+    command: server /data --console-address ":9090"
+    volumes:
+      - minio-data:/data
+    networks:
+      - datalab
+
+  # =========================
   # AIRFLOW INIT
   # =========================
   airflow-init:
@@ -176,12 +194,15 @@ networks:
 
 volumes:
   postgres-db-volume:
+  minio-data:
 
-# =========================
+# ===========================
 # URLs de acesso aos serviços
-# =========================
+# ===========================
 # Spark Master: http://localhost:8080
 # Spark Worker: http://localhost:8081
 # Airflow Webserver: http://localhost:8082
 # Jupyter Notebook: http://localhost:8888
+# MinIO Console: http://localhost:9090
+# MinIO API (S3): http://localhost:9000
 # PostgreSQL: localhost:5432
