@@ -14,6 +14,7 @@ Sinta-se à vontade para utilizar o lab e explorar todos os serviços!
   <img src="https://img.shields.io/badge/Postgres-316192?style=for-the-badge&logo=postgresql&logoColor=white"/>
   <img src="https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white"/>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Metabase-509EE3?style=for-the-badge&logo=metabase&logoColor=white"/>
 </p>
 
 ---
@@ -27,7 +28,7 @@ Antes de iniciar, certifique-se de que sua máquina possui:
 - **Git**: para clonar o repositório.
 - **Python 3.9+** (opcional, caso queira gerar a chave Fernet ou testar scripts fora do container).
 
-> ⚠️ Lembre-se: o lab foi desenvolvido para **localhost**, então todas as portas (8080, 8081, 8082, 8888, 9000, 9090, 5432) devem estar livres na sua máquina.
+> ⚠️ Lembre-se: o lab foi desenvolvido para **localhost**, então todas as portas (8080, 8081, 8082, 8888, 9000, 9090, 3000 e 5432) devem estar livres na sua máquina.
 
 ---
 
@@ -78,6 +79,12 @@ MINIO_ROOT_USER=admin
 MINIO_ROOT_PASSWORD=SUA_SENHA_AQUI #precisa de no mínimo 8 caracteres
 ```
 
+### Metabase
+```
+MB_DB_TYPE=postgres
+MB_DB_HOST=postgres
+```
+
 ### Airflow
 ```
 AIRFLOW_DB_USER=admin
@@ -118,6 +125,10 @@ Não é necessário informar token ou senha para acessar.
 **MinIO (S3 Local)**  
 [http://localhost:9090](http://localhost:9090)  
 Console web para gerenciar buckets e arquivos, simulando o S3  
+
+**Metabase**  
+[http://localhost:3000](http://localhost:3000)  
+Console web para visualização e criação de dashboards com os dados do PostgreSQL  
 
 **Airflow Webserver**  
 [http://localhost:8082](http://localhost:8082)  
