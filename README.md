@@ -1,21 +1,33 @@
 ## 💻 Laboratório de Desenvolvimento - Engenharia de Dados
 
 Um laboratório completo para estudos em **Engenharia de Dados**, rodando via **Docker**.  
-Aqui você encontra um ambiente integrado com **Spark, PySpark, Jupyter, PostgreSQL e Airflow**, pronto para treinar desde consultas SQL até orquestração de pipelines de dados.
+Aqui você encontra um ambiente integrado com **Spark, PySpark, Jupyter, PostgreSQL, MinIO e Airflow**, pronto para treinar desde consultas SQL até orquestração de pipelines de dados e armazenamento S3 local.
+Sinta-se à vontade para utilizar o lab e explorar todos os serviços!
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
   <img src="https://img.shields.io/badge/Spark-FF6F00?style=for-the-badge&logo=apachespark&logoColor=white"/>
   <img src="https://img.shields.io/badge/PySpark-EE4C2C?style=for-the-badge&logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/Spark_SQL-FF6F00?style=for-the-badge&logo=apachespark&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MinIO-26A69A?style=for-the-badge&logo=minio&logoColor=white"/>
   <img src="https://img.shields.io/badge/Postgres-316192?style=for-the-badge&logo=postgresql&logoColor=white"/>
   <img src="https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
 </p>
+
+---
+
+### Pré-requisitos
+
+Antes de iniciar, certifique-se de que sua máquina possui:
+
+- **Docker** (recomendado versão 20+): para rodar os containers.
+- **Docker Compose** (versão 1.27+ ou integrada no Docker Desktop): para subir todos os serviços do lab com um único comando.
+- **Git**: para clonar o repositório.
+- **Python 3.9+** (opcional, caso queira gerar a chave Fernet ou testar scripts fora do container).
+
+> ⚠️ Lembre-se: o lab foi desenvolvido para **localhost**, então todas as portas (8080, 8081, 8082, 8888, 9000, 9090, 5432) devem estar livres na sua máquina.
 
 ---
 
@@ -60,6 +72,12 @@ POSTGRES_DB=lab_dev
 JUPYTER_PASSWORD_HASH=CHAVE_HASH_AQUI
 ```
 
+### MinIO 
+```
+MINIO_ROOT_USER=admin
+MINIO_ROOT_PASSWORD=SUA_SENHA_AQUI #precisa de no mínimo 8 caracteres
+```
+
 ### Airflow
 ```
 AIRFLOW_DB_USER=admin
@@ -97,87 +115,20 @@ Interface web do worker conectado ao cluster Spark.
 Ambiente interativo com PySpark já configurado.  
 Não é necessário informar token ou senha para acessar.
 
-**PostgreSQL**  
-Host: `localhost:5432`  
-Banco de dados relacional para integração com Spark e Airflow.  
+**MinIO (S3 Local)**  
+[http://localhost:9090](http://localhost:9090)  
+Console web para gerenciar buckets e arquivos, simulando o S3  
 
 **Airflow Webserver**  
 [http://localhost:8082](http://localhost:8082)  
 Interface web do Airflow para monitorar DAGs.  
+
+**PostgreSQL**  
+Host: `localhost:5432`  
+Banco de dados relacional para integração com Spark e Airflow. 
 
 **Airflow Scheduler**  
 Responsável por agendar e executar as DAGs.  
 
 **Airflow Triggerer**  
 Responsável por lidar com sensores e disparos assíncronos.  
-
----
-
-### Bônus: Roadmap de Estudos
-
-#### Fundamentos de Python
-- [x] Sintaxe básica, variáveis, tipos de dados  
-- [x] Estruturas de controle (`if`, `for`, `while`)  
-- [x] Funções, módulos e pacotes  
-- [x] Listas, dicionários, tuplas e sets  
-- [x] Manipulação de arquivos (CSV, JSON, TXT)  
-- [x] Bibliotecas: `pandas`, `numpy`, `datetime`  
-
-#### Banco de Dados e SQL
-- [x] Conceitos de banco de dados relacional vs não-relacional  
-- [x] Criação de tabelas e inserção de dados  
-- [x] Consultas básicas (`SELECT`, `WHERE`, `ORDER BY`, `GROUP BY`)  
-- [x] Joins (`INNER`, `LEFT`, `RIGHT`, `FULL`)  
-- [x] Funções agregadas e de janela (`SUM`, `COUNT`, `ROW_NUMBER`)  
-- [x] Subqueries e CTEs (`WITH`)  
-- [x] Prática em PostgreSQL  
-
-#### Git & GitHub
-- [x] Git: clone, add, commit, push, pull  
-- [x] Branches e merges  
-- [x] Pull Requests e code review  
-
-#### Manipulação de Dados com Python
-- [ ] Leitura/escrita de dados: CSV, Excel, Parquet  
-- [ ] Limpeza de dados
-- [ ] Transformações 
-- [ ] Agregações e pivot tables  
-- [ ] Validação e qualidade de dados  
-
-#### Apache Spark & PySpark
-- [ ] Fundamentos de Spark (RDD, DataFrames, Lazy Evaluation)  
-- [ ] Operações básicas (`select`, `filter`, `groupBy`, `join`)  
-- [ ] Leitura e escrita de dados (CSV, Parquet, PostgreSQL, S3)  
-- [ ] Transformações avançadas (`window functions`, `pivot`, `explode`)  
-- [ ] Spark SQL  
-- [ ] Otimização: caching, partitioning, broadcast join  
-- [ ] PySpark UDFs e UDAFs  
-
-#### Orquestração de Pipelines (Airflow)
-- [ ] DAGs e scheduling  
-- [ ] Operadores: PythonOperator, BashOperator, PostgresOperator  
-- [ ] Variáveis, XCom e templates Jinja  
-- [ ] SubDAGs e modularização  
-- [ ] Monitoramento de pipelines e alertas  
-- [ ] Integração Airflow + Spark + Banco de Dados  
-
-#### Engenharia de Dados na Prática
-- [ ] Pipelines de ingestão e transformação  
-- [ ] Integração com APIs e sistemas externos  
-- [ ] Processamento batch vs streaming  
-- [ ] Armazenamento: bancos de dados, data lakes, warehouses  
-- [ ] Logging, rastreabilidade e testes de dados  
-
-#### Boas Práticas & Soft Skills
-- [x] Estrutura de pastas e organização de código  
-- [x] Variáveis de ambiente (`.env`)  
-- [ ] Controle de dependências (`requirements.txt`, `pipenv`, `poetry`)  
-- [x] Documentação clara e README amigável  
-
-#### Extras e Diferenciais
-- [x] Docker para ambientes isolados  
-- [ ] CI/CD aplicado a pipelines de dados  
-- [ ] Conceitos de Big Data: Kafka, Hive, Hudi, Delta Lake  
-- [ ] Aprendizado contínuo: cursos, documentação e projetos práticos  
-
-
