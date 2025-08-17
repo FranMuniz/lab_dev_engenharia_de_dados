@@ -28,7 +28,18 @@ Antes de iniciar, certifique-se de que sua máquina possui:
 - **Docker Compose** (versão 1.27+ ou integrada no Docker Desktop): para subir todos os serviços do lab com um único comando.
 - **Git**: para clonar o repositório.
 - **Python 3.9+** (opcional, caso queira gerar a chave Fernet ou testar scripts fora do container).
+- **PostgreSQL**: é recomendado criar **schemas separados** para cada serviço (por exemplo, `airflow` e `metabase`) para evitar conflito de tabelas internas.
 
+Exemplo de criação de schemas:
+```sql
+-- Schema para Airflow
+CREATE SCHEMA IF NOT EXISTS airflow;
+GRANT ALL PRIVILEGES ON SCHEMA airflow TO admin;
+
+-- Schema para Metabase
+CREATE SCHEMA IF NOT EXISTS metabase;
+GRANT ALL PRIVILEGES ON SCHEMA metabase TO admin;
+```
 > ⚠️ Lembre-se: o lab foi desenvolvido para **localhost**, então todas as portas (8080, 8081, 8082, 8888, 9000, 9090, 3000 e 5432) devem estar livres na sua máquina.
 
 ---
@@ -62,41 +73,7 @@ cd lab_dev_engenharia_de_dados/
 ---
 
 ### 2️⃣ Configure o arquivo .env
-### PostgreSQL
-```
-POSTGRES_USER=admin
-POSTGRES_PASSWORD=admin
-POSTGRES_DB=lab_dev
-```
-
-### Jupyter (opcional, já está sem token)
-```
-JUPYTER_PASSWORD_HASH=CHAVE_HASH_AQUI
-```
-
-### MinIO 
-```
-MINIO_ROOT_USER=admin
-MINIO_ROOT_PASSWORD=SUA_SENHA_AQUI #precisa de no mínimo 8 caracteres
-```
-
-### Metabase
-```
-MB_DB_TYPE=postgres
-MB_DB_HOST=postgres
-```
-
-### Airflow
-```
-AIRFLOW_DB_USER=admin
-AIRFLOW_DB_PASSWORD=admin
-AIRFLOW_DB_NAME=lab_dev
-AIRFLOW_FERNET_KEY=CHAVE_FERNET_AQUI
-```
-Gere a chave Fernet com:
-```bash
-python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
-```
+Arquivo disponível no repositório, atualize com suas credenciais
 
 ---
 
