@@ -1,8 +1,19 @@
 ## 💻 Laboratório de Desenvolvimento - Engenharia de Dados
 
 Um laboratório completo para estudos em **Engenharia de Dados**, rodando via **Docker**.  
-Aqui você encontra um ambiente integrado com **Spark, PySpark, Jupyter, PostgreSQL, MinIO e Airflow**, pronto para treinar desde consultas SQL até orquestração de pipelines de dados e armazenamento S3 local.
+Aqui você encontra um ambiente integrado com:
+
+- [Apache Spark](https://spark.apache.org/)  
+- [PySpark](https://spark.apache.org/docs/latest/api/python/)  
+- [Jupyter Notebook](https://jupyter.org/)  
+- [PostgreSQL](https://www.postgresql.org/)  
+- [MinIO (S3 local)](https://min.io/)  
+- [Apache Airflow](https://airflow.apache.org/)  
+- [Metabase](https://www.metabase.com/)  
+
+Pronto para treinar desde **consultas SQL** até **orquestração de pipelines de dados**, **visualização de dados** e **armazenamento S3 local**.  
 Sinta-se à vontade para utilizar o lab e explorar todos os serviços!
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
