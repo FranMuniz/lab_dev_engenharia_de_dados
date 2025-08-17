@@ -18,6 +18,19 @@ Sinta-se à vontade para utilizar o lab e explorar todos os serviços!
 
 ---
 
+### Pré-requisitos
+
+Antes de iniciar, certifique-se de que sua máquina possui:
+
+- **Docker** (recomendado versão 20+): para rodar os containers.
+- **Docker Compose** (versão 1.27+ ou integrada no Docker Desktop): para subir todos os serviços do lab com um único comando.
+- **Git**: para clonar o repositório.
+- **Python 3.9+** (opcional, caso queira gerar a chave Fernet ou testar scripts fora do container).
+
+> ⚠️ Lembre-se: o lab foi desenvolvido para **localhost**, então todas as portas (8080, 8081, 8082, 8888, 9000, 9090, 5432) devem estar livres na sua máquina.
+
+--
+
 ### 📂 Estrutura de Pastas
 
 ```bash
