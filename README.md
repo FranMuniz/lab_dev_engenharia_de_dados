@@ -1,7 +1,8 @@
 ## 💻 Laboratório de Desenvolvimento - Engenharia de Dados
 
 Um laboratório completo para estudos em **Engenharia de Dados**, rodando via **Docker**.  
-Aqui você encontra um ambiente integrado com **Spark, PySpark, Jupyter, PostgreSQL e Airflow**, pronto para treinar desde consultas SQL até orquestração de pipelines de dados.
+Aqui você encontra um ambiente integrado com **Spark, PySpark, Jupyter, PostgreSQL, MinIO e Airflow**, pronto para treinar desde consultas SQL até orquestração de pipelines de dados e armazenamento S3 local.
+Sinta-se à vontade para utilizar o lab e explorar todos os serviços!
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
@@ -9,6 +10,7 @@ Aqui você encontra um ambiente integrado com **Spark, PySpark, Jupyter, Postgre
   <img src="https://img.shields.io/badge/Spark-FF6F00?style=for-the-badge&logo=apachespark&logoColor=white"/>
   <img src="https://img.shields.io/badge/PySpark-EE4C2C?style=for-the-badge&logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/Spark_SQL-FF6F00?style=for-the-badge&logo=apachespark&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MinIO-26A69A?style=for-the-badge&logo=minio&logoColor=white"/>
   <img src="https://img.shields.io/badge/Postgres-316192?style=for-the-badge&logo=postgresql&logoColor=white"/>
   <img src="https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white"/>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
@@ -94,17 +96,20 @@ Interface web do worker conectado ao cluster Spark.
 Ambiente interativo com PySpark já configurado.  
 Não é necessário informar token ou senha para acessar.
 
-**PostgreSQL**  
-Host: `localhost:5432`  
-Banco de dados relacional para integração com Spark e Airflow.  
+**MinIO (S3 Local)**  
+[http://localhost:9090](http://localhost:9090)  
+Console web para gerenciar buckets e arquivos, simulando o S3  
 
 **Airflow Webserver**  
 [http://localhost:8082](http://localhost:8082)  
 Interface web do Airflow para monitorar DAGs.  
+
+**PostgreSQL**  
+Host: `localhost:5432`  
+Banco de dados relacional para integração com Spark e Airflow. 
 
 **Airflow Scheduler**  
 Responsável por agendar e executar as DAGs.  
 
 **Airflow Triggerer**  
 Responsável por lidar com sensores e disparos assíncronos.  
-
