@@ -29,7 +29,7 @@ Antes de iniciar, certifique-se de que sua máquina possui:
 
 > ⚠️ Lembre-se: o lab foi desenvolvido para **localhost**, então todas as portas (8080, 8081, 8082, 8888, 9000, 9090, 5432) devem estar livres na sua máquina.
 
---
+---
 
 ### 📂 Estrutura de Pastas
 
@@ -70,6 +70,12 @@ POSTGRES_DB=lab_dev
 ### Jupyter (opcional, já está sem token)
 ```
 JUPYTER_PASSWORD_HASH=CHAVE_HASH_AQUI
+```
+
+### MinIO 
+```
+MINIO_ROOT_USER=admin
+MINIO_ROOT_PASSWORD=SUA_SENHA_AQUI #precisa de no mínimo 8 caracteres
 ```
 
 ### Airflow
