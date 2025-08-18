@@ -62,22 +62,26 @@ lab_dev_engenharia_de_dados/
 
 ## Como rodar o ambiente
 
-### 1️⃣ Clone este repositório
-Clone o repositório e entre na pasta do projeto:  
+### 1️⃣ Faça um fork deste repositório
+Clique em **Fork** no GitHub para criar uma cópia do repositório na sua conta.
+
+### 2️⃣ Clone o seu fork
+Depois de criar o fork, clone o repositório da sua conta e entre na pasta do projeto:  
 **Comandos:**  
 ```bash
-git clone git@github.com:FranMuniz/lab_dev_engenharia_de_dados.git 
+git clone git@github.com:SEU_USUARIO/lab_dev_engenharia_de_dados.git
 cd lab_dev_engenharia_de_dados/
 ```
+> ⚠️ Importante: sempre clone seu fork e não o repositório original, assim você poderá subir mudanças sem precisar de permissões no repositório original.
 
 ---
 
-### 2️⃣ Configure o arquivo .env
+### 3️⃣ Configure o arquivo .env
 Arquivo disponível no repositório, atualize com suas credenciais
 
 ---
 
-### 3️⃣ Suba os serviços com Docker Compose
+### 4️⃣ Suba os serviços com Docker Compose
 **Comando:**  
 ```bash
 docker-compose up -d
@@ -85,7 +89,7 @@ docker-compose up -d
 
 ---
 
-### 4️⃣ Acesse os serviços
+### 5️⃣ Acesse os serviços
 
 **Spark Master**  
 [http://localhost:8080](http://localhost:8080)  
