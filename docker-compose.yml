@@ -62,6 +62,7 @@ services:
       - "8888:8888"
     volumes:
       - ./notebooks:/home/jovyan/work
+      - ./projeto_final:/home/jovyan/projeto_final
     environment:
       - JUPYTER_PASSWORD=${JUPYTER_PASSWORD_HASH}
     command: start-notebook.sh --NotebookApp.token=''
@@ -125,10 +126,12 @@ services:
       AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
       AIRFLOW__CORE__DEFAULT_TIMEZONE: utc
+      PYTHONPATH: /opt/airflow/projeto_final
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
+      - ./projeto_final:/opt/airflow/projeto_final
     command: >
       bash -c "
         airflow db upgrade &&
@@ -153,10 +156,12 @@ services:
       AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
       AIRFLOW__CORE__DEFAULT_TIMEZONE: utc
+      PYTHONPATH: /opt/airflow/projeto_final
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
+      - ./projeto_final:/opt/airflow/projeto_final
     ports:
       - "8082:8080"
     command: airflow webserver
@@ -179,10 +184,12 @@ services:
       AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
       AIRFLOW__CORE__DEFAULT_TIMEZONE: utc
+      PYTHONPATH: /opt/airflow/projeto_final
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
+      - ./projeto_final:/opt/airflow/projeto_final
     command: airflow scheduler
     networks:
       - datalab
@@ -203,10 +210,12 @@ services:
       AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
       AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
       AIRFLOW__CORE__DEFAULT_TIMEZONE: utc
+      PYTHONPATH: /opt/airflow/projeto_final
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
+      - ./projeto_final:/opt/airflow/projeto_final
     command: airflow triggerer
     networks:
       - datalab
@@ -222,9 +231,9 @@ volumes:
   postgres-db-volume:
   minio-data:
 
-# ===========================
+# =========================
 # URLs de acesso aos serviços
-# ===========================
+# =========================
 # Spark Master: http://localhost:8080
 # Spark Worker: http://localhost:8081
 # Airflow Webserver: http://localhost:8082

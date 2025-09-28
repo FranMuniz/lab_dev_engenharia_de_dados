@@ -14,7 +14,7 @@ s3 = boto3.resource(
     region_name="us-east-1"
 )
 
-bucket_name = "bucket-teste-fran"
+bucket_name = "bucket-teste2-fran"
 
 if s3.Bucket(bucket_name) not in s3.buckets.all():
     s3.create_bucket(Bucket=bucket_name)
