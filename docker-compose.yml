@@ -63,6 +63,7 @@ services:
     volumes:
       - ./notebooks:/home/jovyan/work
       - ./projeto_final:/home/jovyan/projeto_final
+      - ./estudos_spark:/home/jovyan/estudos_spark
     environment:
       - JUPYTER_PASSWORD=${JUPYTER_PASSWORD_HASH}
     command: start-notebook.sh --NotebookApp.token=''
