@@ -1,0 +1,11 @@
+id_pedido,data,produto,categoria,cidade,valor
+1,2024-01-10,Notebook,Eletronico,SP,3500
+2,2024-01-12,Celular,Eletronico,RJ,2200
+3,2024-01-15,Camiseta,Roupa,SP,120
+4,2024-02-01,Calça,Roupa,MG,200
+5,2024-02-10,Fone,Eletronico,SP,300
+6,2024-02-15,Tênis,Calçado,RJ,450
+7,2024-03-05,Notebook,Eletronico,MG,3700
+8,2024-03-10,Camiseta,Roupa,SP,90
+9,2024-03-20,Celular,Eletronico,SP,2500
+10,2024-03-25,Tênis,Calçado,MG,500
